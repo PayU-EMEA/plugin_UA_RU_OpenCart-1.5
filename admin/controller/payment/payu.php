@@ -64,7 +64,7 @@ class ControllerPaymentPayU extends Controller {
 		$this->data['order_statuses'] = $this->model_localisation_order_status->getOrderStatuses();
 		
 		$arr = array( "payu_merchant", "payu_secretkey", "payu_debug", "payu_LU", "payu_currency", 
-					  "payu_backref", "payu_vat", "payu_language", "payu_status", "payu_sort_order" );
+					  "payu_backref", "payu_vat", "payu_language", "payu_status", "payu_sort_order", "payu_order_status_id" );
 
 		foreach ( $arr as $v )
 		{

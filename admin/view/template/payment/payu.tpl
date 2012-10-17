@@ -72,6 +72,7 @@
             <td><select name="payu_order_status_id">
                 <?php 
                 foreach ($order_statuses as $order_status) { 
+
                 $st = ($order_status['order_status_id'] == $payu_order_status_id) ? ' selected="selected" ' : ""; 
                 ?>
                 <option value="<?php echo $order_status['order_status_id']; ?>" <?= $st ?> ><?php echo $order_status['name']; ?></option>
