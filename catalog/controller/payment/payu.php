@@ -142,7 +142,7 @@ class PayU
 	{
 		if ( !isset( $opt['merchant'] ) || !isset( $opt['secretkey'] )) die("No params");
 		self::$merchant = $opt['merchant'];
-		self::$key = $opt['secretkey'];
+		self::$key = htmlspecialchars_decode( $opt['secretkey'] );
 		unset( $opt['merchant'], $opt['secretkey'] );
 		if ( count($opt) === 0 ) return $this;
 		foreach ( $opt as $k => $v) $this->$k = $v;
